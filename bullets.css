@@ -18,7 +18,7 @@ ul, #sitemap {
 
 .caret::before {
   content: "\25B6";
-  color: black;
+  color: navy;
   display: inline-block;
   margin-right: 6px;
 }
