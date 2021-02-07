@@ -1,0 +1,32 @@
+leo/
+├── about.html
+├── bullets.css
+├── dog.html
+├── dragon.html
+├── dragon.jpg
+├── favicon.ico
+├── glig.png
+├── histoire.jpg
+├── index.html
+├── koalaRoll.gif
+├── koalas/
+│   └── koalaRoll.gif
+├── list.js
+├── list.txt
+├── menu.html
+├── poems/
+│   ├── dragon/
+│   │   ├── dragon.html
+│   │   ├── dragon.jpg
+│   │   └── style.css
+│   └── poems.txt
+├── server.py
+├── sitemap.html
+├── sqpurple.gif
+├── stuff/
+│   └── stuff.txt
+├── stuff.py
+├── style.css
+└── weather.txt
+
+4 directories, 25 files
