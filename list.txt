@@ -2,8 +2,6 @@ leo/
 ├── about.html
 ├── bullets.css
 ├── dog.html
-├── dragon.html
-├── dragon.jpg
 ├── favicon.ico
 ├── glig.png
 ├── histoire.jpg
@@ -23,7 +21,8 @@ leo/
 │   │   ├── dragon.jpg
 │   │   └── style.css
 │   └── poems.txt
-├── server.py
+├── README.md
+├── server.py*
 ├── sitemap.html
 ├── sqpurple.gif
 ├── stuff/
@@ -33,4 +32,4 @@ leo/
 ├── style.css
 └── weather.txt
 
-4 directories, 29 files
+4 directories, 28 files
