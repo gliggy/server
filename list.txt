@@ -16,6 +16,9 @@ leo/
 ├── menu.html
 ├── poems/
 │   ├── dragon/
+│   │   ├── dragon2.jpg
+│   │   ├── dragon3.jpg
+│   │   ├── dragon4.jpg
 │   │   ├── dragon.html
 │   │   ├── dragon.jpg
 │   │   └── style.css
@@ -24,9 +27,10 @@ leo/
 ├── sitemap.html
 ├── sqpurple.gif
 ├── stuff/
+│   ├── motif.txt
 │   └── stuff.txt
 ├── stuff.py
 ├── style.css
 └── weather.txt
 
-4 directories, 25 files
+4 directories, 29 files
