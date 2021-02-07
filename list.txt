@@ -4,11 +4,15 @@ leo/
 ├── dog.html
 ├── favicon.ico
 ├── glig.png
+├── helene/
+│   ├── motif/
+│   │   └── motif.txt
+│   └── silteplait.txt
 ├── histoire.jpg
 ├── index.html
-├── koalaRoll.gif
 ├── koalas/
-│   └── koalaRoll.gif
+│   ├── koalaRoll.gif
+│   └── koalaRollyPolly.gif
 ├── list.js
 ├── list.txt
 ├── menu.html
@@ -22,6 +26,7 @@ leo/
 │   │   └── style.css
 │   └── poems.txt
 ├── README.md
+├── secrets/
 ├── server.py*
 ├── sitemap.html
 ├── sqpurple.gif
@@ -32,4 +37,4 @@ leo/
 ├── style.css
 └── weather.txt
 
-4 directories, 28 files
+7 directories, 30 files
