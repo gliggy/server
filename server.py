@@ -91,7 +91,7 @@ def liststyle(file):
 #print(liststyle(lister(workdir)))
 #exit(1)
 
-lst = "<!DOCTYPE html>\n<head>\n<link rel='stylesheet' type='text/css' href='bullets.css' />\n<link rel='stylesheet' type='text/css' href='style.css' />\n</head>"
+lst = "<!DOCTYPE html>\n<head>\n<title>SITEMAP</title><link rel='stylesheet' type='text/css' href='bullets.css' />\n<link rel='stylesheet' type='text/css' href='style.css' />\n</head>"
 lst += "<body>"
 lst += "<ul id='sitemap'>\n"
 lst += liststyle(lister(workdir))
