@@ -5,6 +5,7 @@ GET leo at 08/02/2021 16:41:52
 GET leo/style.css at 08/02/2021 16:41:53
 GET leo/glig.png at 08/02/2021 16:41:53
 GET leo/favicon.ico at 08/02/2021 16:41:53
+<<<<<<< HEAD
 GET leo at 08/02/2021 17:00:58
 GET leo/style.css at 08/02/2021 17:00:58
 GET leo/glig.png at 08/02/2021 17:00:58
@@ -12,8 +13,4 @@ GET leo at 08/02/2021 18:29:54
 GET leo/style.css at 08/02/2021 18:29:54
 GET leo/glig.png at 08/02/2021 18:29:54
 GET leo/poems/dragon/dragon.html at 08/02/2021 18:32:23
-GET leo/poems/dragon/style.css at 08/02/2021 18:32:23
-GET leo/poems/dragon/dragon4.jpg at 08/02/2021 18:32:23
-GET leo/poems/dragon/dragon3.jpg at 08/02/2021 18:32:23
-GET leo/poems/dragon/dragon.jpg at 08/02/2021 18:32:23
-GET leo/poems/dragon/dragon2.jpg at 08/02/2021 18:32:23
+
