@@ -164,9 +164,9 @@ class S(BaseHTTPRequestHandler):
         print (os.path.abspath(path))
         now = datetime.now()
 
-        # dd/mm/YY H:M:S
+        # date
         dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-        os.system("echo 'GET {0} at {1}' >> log.txt".format(relpath, dt_string))
+        #os.system("echo 'GET {0} at {1}' >> log.txt".format(relpath, dt_string))
     
     def do_HEAD(self):
         self._set_headers("text/html", 200)
