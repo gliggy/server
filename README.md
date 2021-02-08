@@ -1,0 +1,2 @@
+# server
+Woo! A server!
