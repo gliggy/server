@@ -31,10 +31,11 @@ leo/
 ├── sitemap.html
 ├── sqpurple.gif
 ├── stuff/
+│   ├── Math.pdf
 │   ├── motif.txt
 │   └── stuff.txt
 ├── stuff.py
 ├── style.css
 └── weather.txt
 
-7 directories, 30 files
+7 directories, 31 files

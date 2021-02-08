@@ -88,10 +88,8 @@ def liststyle(file):
     part += "</ul>\n"
     return part
 
-#print(liststyle(lister(workdir)))
-#exit(1)
 
-lst = "<!DOCTYPE html>\n<head>\n<title>SITEMAP</title><link rel='stylesheet' type='text/css' href='bullets.css' />\n<link rel='stylesheet' type='text/css' href='style.css' />\n</head>"
+lst = "<!DOCTYPE html>\n<head>\n<title>SITEMAP</title>\n<link rel='stylesheet' type='text/css' href='bullets.css' />\n<link rel='stylesheet' type='text/css' href='style.css' />\n<meta name='viewport' content='width=device-width, initial-scale=1.0'\n></head>"
 lst += "<body>"
 lst += "<ul id='sitemap'>\n"
 lst += liststyle(lister(workdir))
@@ -100,20 +98,22 @@ lst += "<script src='list.js'></script>\n"
 lst += "</body>"
 with open(workdir + "/sitemap.html", "w") as f:
     f.write(lst)
-#exit(1)
- 
+
+# ~~~~~~~~~~~~~~~~~~Handler~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+def escape(t):
+    """HTML-escape the text in `t`."""
+    return (t
+        .replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+        .replace("'", "&#39;").replace('"', "&quot;")
+        )
+
+
 class S(BaseHTTPRequestHandler):
     def _set_headers(self, type, status):
         self.send_response(status)
         self.send_header("Content-type", type)
         self.send_header("X-Content-Type-Options", "nosniff")
         self.end_headers()
-
-#    def _document(self, document):
-#        #This just generates a document
-#        content = "{}".format(document)
-#        # "<html><head><title>{1}</title></head<body><h1>{0}</h1><h2>Date is {2}</h2></body></html>".format(message, title, today)
-#        return content.encode("utf-8")  # NOTE: must return a bytes object!
 
     def do_GET(self):
         # check if file
@@ -200,7 +200,7 @@ class S(BaseHTTPRequestHandler):
             else:
                 f = open(relpath)
                 self._set_headers("text/html; charset=utf-8", 415)
-                self.wfile.write("<h1>415 - Unsupported Media Type</h1><pre>{}</pre>".format(f.read()).encode("utf-8"))
+                self.wfile.write("<h1>415 - Unsupported Media Type</h1><pre>{}</pre>".format(escape(f.read())).encode("utf-8"))
         print (relpath)
         print (os.path.abspath(path))
         now = datetime.now()
