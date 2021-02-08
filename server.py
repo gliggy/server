@@ -42,6 +42,7 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
 OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.    
 
 """
+# requirements: argparse, os, http.server, datetime, base64, glob
 import argparse
 import os
 from http.server import HTTPServer, BaseHTTPRequestHandler
@@ -49,55 +50,12 @@ from datetime import datetime
 import base64
 import glob
 
+
+# set workdir
 workdir = "./leo/"
 
-os.system("tree -F leo/ > ~/leo/list.txt")
-#g'
-
-lstdir = ["."]
-#print(glob.glob("./leo/**", recursive=True))
-for dirs in os.walk(workdir):
-    lstdir.append(dirs[0])
-
-#print(lstdir)
-dirs = lstdir
-#print(dirs)
-
-#exit(1)
-
-def isdir(file, dir_file):
-    if file.startswith(workdir + dir_file):
-        return True
-    else:
-        return False
-
-def lister(file):
-    if os.path.isfile(file):
-        return file
-    files = glob.glob(file + "/*")
-    return [file, [lister(f) for f in files]]
-
-def liststyle(file):
-    if type(file) is not list:
-        rfile = os.path.relpath(file, start = workdir)
-        return "<li><a href='{}'>{}</a></li>\n".format(rfile, rfile)
-    dir1 = file[0]
-    part = "<li><span class='caret'>{}/</span>\n".format(os.path.relpath(dir1, start = workdir))
-    part += "<ul class='nested'>\n"
-    part += "".join(liststyle(f) for f in file[1])
-    part += "</ul>\n"
-    return part
-
-
-lst = "<!DOCTYPE html>\n<head>\n<title>SITEMAP</title>\n<link rel='stylesheet' type='text/css' href='bullets.css' />\n<link rel='stylesheet' type='text/css' href='style.css' />\n<meta name='viewport' content='width=device-width, initial-scale=1.0'\n></head>"
-lst += "<body>"
-lst += "<ul id='sitemap'>\n"
-lst += liststyle(lister(workdir))
-lst += "</li></ul>\n"
-lst += "<script src='list.js'></script>\n"
-lst += "</body>"
-with open(workdir + "/sitemap.html", "w") as f:
-    f.write(lst)
+# list site
+os.system("~/sitemap.py")
 
 # ~~~~~~~~~~~~~~~~~~Handler~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 def escape(t):

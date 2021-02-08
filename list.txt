@@ -2,6 +2,7 @@ leo/
 ├── about.html
 ├── bullets.css
 ├── dog.html
+├── esc-test.txt
 ├── favicon.ico
 ├── glig.png
 ├── helene/
@@ -33,9 +34,10 @@ leo/
 ├── stuff/
 │   ├── Math.pdf
 │   ├── motif.txt
-│   └── stuff.txt
+│   ├── stuff.txt
+│   └── wooo.txt
 ├── stuff.py
 ├── style.css
 └── weather.txt
 
-7 directories, 31 files
+7 directories, 33 files
