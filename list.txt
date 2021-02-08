@@ -1,0 +1,44 @@
+leo/
+├── about.html
+├── bullets.css
+├── dog.html
+├── esc-test.txt
+├── favicon.ico
+├── glig.png
+├── helene/
+│   ├── motif/
+│   │   └── motif.txt
+│   └── silteplait.txt
+├── histoire.jpg
+├── index.html
+├── koalas/
+│   ├── koalaRoll.gif
+│   └── koalaRollyPolly.gif
+├── list.js
+├── list.txt
+├── menu.html
+├── poems/
+│   ├── dragon/
+│   │   ├── dragon2.jpg
+│   │   ├── dragon3.jpg
+│   │   ├── dragon4.jpg
+│   │   ├── dragon.html
+│   │   ├── dragon.jpg
+│   │   └── style.css
+│   └── poems.txt
+├── README.md
+├── secrets/
+├── server.py*
+├── sitemap.html
+├── sitemap.py*
+├── sqpurple.gif
+├── stuff/
+│   ├── Math.pdf
+│   ├── motif.txt
+│   ├── stuff.txt
+│   └── wooo.txt
+├── stuff.py
+├── style.css
+└── weather.txt
+
+7 directories, 34 files

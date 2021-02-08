@@ -1,0 +1,44 @@
+Expires:202102062115;;096333
+FPUS51 KOKX 061657
+ZFPOKX
+
+Zone Forecast Product
+National Weather Service New York NY
+1157 AM EST Sat Feb 6 2021
+
+
+NJZ106-062115-
+Eastern Essex-
+1157 AM EST Sat Feb 6 2021
+
+...WINTER STORM WARNING IN EFFECT FROM 6 AM TO 9 PM EST SUNDAY...
+
+.THIS AFTERNOON...Sunny. Highs in the lower 40s. West winds 10 to
+15 mph with gusts up to 25 mph.
+.TONIGHT...Partly cloudy in the evening, then cloudy with a
+chance of snow after midnight. Lows in the upper 20s. West winds
+5 to 10 mph, becoming northeast after midnight. Chance of snow
+40 percent.
+.SUNDAY...Snow. Snow may be heavy at times. Snow accumulation of
+4 to 8 inches. Highs in the lower 30s. North winds 5 to 10 mph.
+Gusts up to 20 mph in the afternoon. Chance of snow near
+100 percent.
+.SUNDAY NIGHT...Partly cloudy with snow likely in the evening,
+then mostly clear after midnight. Little or no additional snow
+accumulation. Lows around 18. Northwest winds 10 to 15 mph.
+Chance of snow 60 percent.
+.MONDAY...Sunny. Highs around 30. West winds 5 to 10 mph.
+.MONDAY NIGHT...Mostly cloudy. Lows in the lower 20s.
+.TUESDAY...Cloudy with a chance of rain or snow. Highs around 40.
+Chance of precipitation 50 percent.
+.TUESDAY NIGHT...Mostly cloudy. Lows in the mid 20s.
+.WEDNESDAY...Partly sunny. Highs in the lower 30s.
+.WEDNESDAY NIGHT...Mostly cloudy. Lows 15 to 20.
+.THURSDAY...Partly sunny. Cold with highs in the upper 20s.
+.THURSDAY NIGHT...Mostly cloudy. Lows 15 to 20.
+.FRIDAY...Mostly cloudy. Cold with highs in the mid 20s.
+
+$$
+
+
+
