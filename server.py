@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.5
+#!/usr/bin/env python3
 
 """
 Very simple HTTP server in python (Updated for Python 3.7)
