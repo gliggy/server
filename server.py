@@ -53,6 +53,7 @@ import glob
 
 # set workdir
 workdir = "./leo/"
+absdir = os.path.abspath("leo")
 
 # list site
 os.system("~/sitemap.py")
@@ -135,7 +136,7 @@ class S(BaseHTTPRequestHandler):
                 type = "text"
                 sendReply = True
 
-            if sendReply == True and abspath.startswith("/home/leo/leo"):
+            if sendReply == True and abspath.startswith(absdir):
                 #Open the static file requested and send it
                 f = open(relpath, 'r' if type == 'text' or type == 'list' else 'rb') 
                 #self.send_response(200)
@@ -152,7 +153,7 @@ class S(BaseHTTPRequestHandler):
                     # print("coded content", coded_content)
                     self.wfile.write(content)
                 f.close()
-            elif sendReply == True and not abspath.startswith("/home/leo/leo"):
+            elif sendReply == True and not abspath.startswith(absdir):
                 self._set_headers("text/html; charset=utf-8", 403)
                 self.wfile.write("<title>403</title><h1>403 - Forbidden</h1>".encode("utf-8"))
             else:
