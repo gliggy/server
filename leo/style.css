@@ -15,6 +15,18 @@ body {
   padding: 10px;
 }
 
+.comic {
+  border: 2px solid green;
+}
+
+.buttons {
+  display: block;
+  /*max-width: 50%;*/
+  border: 2px solid green;
+  margin: 0 auto;
+  padding: 10px;
+}
+
 h1 {
   color: darkolivegreen;
   text-align: center;

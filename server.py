@@ -56,7 +56,7 @@ workdir = "./leo/"
 absdir = os.path.abspath("leo")
 
 # list site
-os.system("~/sitemap.py")
+os.system("./sitemap.py")
 
 # ~~~~~~~~~~~~~~~~~~Handler~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 def escape(t):
@@ -82,7 +82,7 @@ class S(BaseHTTPRequestHandler):
         is_file = os.path.isfile(relpath)
         # which html to serve, perhaps other data types in the future...
         # plain text list
-        plain_text = ["c","c++","com","cc","conf","cxx","def","f","f90","for","g","h","hh","idc","jav","java","list","log","lst","m","mar","pl","sdml","text","txt"]
+        plain_text = ["c","c++","com","cc","conf","cxx","def","f","f90","for","g","h","hh","idc","jav","java","list","log","lst","m","mar","pl","sdml","text","txt","py"]
 
         if not is_file:
             # if it is root, serve index

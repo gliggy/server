@@ -1,6 +1,10 @@
 leo/
 ├── about.html
 ├── bullets.css
+├── comics/
+│   ├── 0.jpg
+│   ├── comics.html
+│   └── xkcd-css.css
 ├── dog.html
 ├── esc-test.txt
 ├── favicon.ico
@@ -41,4 +45,4 @@ leo/
 ├── style.css
 └── weather.txt
 
-7 directories, 34 files
+8 directories, 37 files

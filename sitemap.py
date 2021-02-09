@@ -8,7 +8,7 @@ workdir = "./leo/"
 
 # update list (requires tree)
 try:
-    os.system("tree -F leo/ > ~/leo/list.txt")
+    os.system("tree -F leo/ > leo/list.txt")
 except:
     print("tree not found")
 
