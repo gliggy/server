@@ -48,10 +48,12 @@ def liststyle(file):
 
 lst = "<!DOCTYPE html>\n<head>\n<title>SITEMAP</title>\n<link rel='stylesheet' type='text/css' href='bullets.css' />\n<link rel='stylesheet' type='text/css' href='style.css' />\n<meta name='viewport' content='width=device-width, initial-scale=1.0'\n></head>"
 lst += "<body>"
+lst += "<h1>Sitemap</h1>\n<h2>Click on the folders to see inside.</h2>"
 lst += "<ul id='sitemap'>\n"
 lst += liststyle(lister(workdir))
 lst += "</li></ul>\n"
 lst += "<script src='list.js'></script>\n"
+lst += "<p>Is this working? If not, you can see a list <a href='/list.txt'>here</a>.</p>\n"
 lst += "</body>"
 with open(workdir + "/sitemap.html", "w") as f:
     f.write(lst)

@@ -18,7 +18,7 @@ workdir = "./leo/comics/"
 file = args.file
 #place = args.place
 img = "{}.png".format(file)
-alt = "{}.txt".format(file)
+#alt = "{}.txt".format(file)
 #random = random.randint(0,5)
 
 def buttons():
@@ -31,20 +31,43 @@ def buttons():
     to_return += "</ul>\n<br>\n"
     return(to_return)
 
-script = 0
-#if place == "last":
-#    script = "alert('You're at the last comic.');"
+if os.path.isfile(workdir + "imgs/" + img):
+    script = 0
+    real_img = "{}.png".format(file)
+    alt = "{}.txt".format(file)
+    comic = "<!DOCTYPE html>\n<html>\n<head>\n<title>COMICS</title>\n<link rel='stylesheet' type='text/css' href='/comics/comic-style.css' />\n<link rel='stylesheet' type='text/css' href='/style.css' />\n</head>\n"
+    comic += "<body>\n<script>0</script>\n<h1>COMICS</h1>\n<div>\n<br>\n".format(script)
+    comic += buttons()
+    comic += "<a href='/comics/imgs/{0}'><img src='/comics/imgs/{0}' alt='{1}' title='{2}' class='comic'></a>\n<br>\n".format(real_img,file,alt)
+    comic += buttons()
+    comic += "</div>\n"
+    comic += "<script>{}</script>".format(script)
+    comic += "</body>\n"
+elif file < 1:
+    script = "alert('There are no earlier comics.'); window.location.replace('http://leo.growrows.com/comics/{}');".format(1)
+    real_img = "{}.png".format(1)
+    alt = "{}.txt".format(1)
+    comic = "<!DOCTYPE html>\n<html>\n<head>\n<title>COMICS</title>\n<link rel='stylesheet' type='text/css' href='/comics/comic-style.css' />\n<link rel='stylesheet' type='text/css' href='/style.css' />\n</head>\n"
+    comic += "<body>\n<script>0</script>\n<h1>COMICS</h1>\n<div>\n<br>\n".format(script)
+    comic += buttons()
+    comic += "<a href='/comics/imgs/{0}'><img src='/comics/imgs/{0}' alt='{1}' title='{2}' class='comic'></a>\n<br>\n".format(real_img,file,alt)
+    comic += buttons()
+    comic += "</div>\n"
+    comic += "<script>{}</script>".format(script)
+    comic += "</body>\n"
+else:
+    script = "alert('You have reached the last comic.'); window.location.replace('http://leo.growrows.com/comics/{}');".format(file - 1)
+    real_img = "{}.png".format(file - 1)
+    alt = "{}.txt".format(file - 1)
+    comic = "<!DOCTYPE html>\n<html>\n<head>\n<title>COMICS</title>\n<link rel='stylesheet' type='text/css' href='/comics/comic-style.css' />\n<link rel='stylesheet' type='text/css' href='/style.css' />\n</head>\n"
+    comic += "<body>\n<script>0</script>\n<h1>COMICS</h1>\n<div>\n<br>\n".format(script)
+    comic += buttons()
+    comic += "<a href='/comics/imgs/{0}'><img src='/comics/imgs/{0}' alt='{1}' title='{2}' class='comic'></a>\n<br>\n".format(real_img,file,alt)
+    comic += buttons()
+    comic += "</div>\n"
+    comic += "<script>{}</script>".format(script)
+    comic += "</body>\n"
 
-comic = "<!DOCTYPE html>\n<html>\n<head>\n<title>COMICS</title>\n<link rel='stylesheet' type='text/css' href='/comics/comic-style.css' />\n<link rel='stylesheet' type='text/css' href='/style.css' />\n</head>\n"
-comic += "<body>\n<script>{}</script>\n<h1>COMICS</h1>\n<div>\n<br>\n".format(script)
-comic += buttons()
-comic += "<img src='/comics/imgs/{}' alt='{}' title='{}' class='comic'>\n<br>\n".format(img,file,alt)
-comic += buttons()
-comic += "</div>\n"
-comic += "</body>\n"
-
-#with open(workdir + "index.html", "w") as f:
-#    f.write(comic)
     
 print(comic)
 

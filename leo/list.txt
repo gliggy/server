@@ -51,6 +51,7 @@ leo/
 │   └── poems.txt
 ├── README.md
 ├── secrets/
+│   └── secrets.txt
 ├── server.py*
 ├── sitemap.html
 ├── sitemap.py*
@@ -62,6 +63,8 @@ leo/
 │   └── wooo.txt
 ├── stuff.py
 ├── style.css
+├── valen/
+│   └── index.html
 └── weather.txt
 
-11 directories, 53 files
+12 directories, 55 files
