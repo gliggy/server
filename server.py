@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.5
 
 """
 Very simple HTTP server in python (Updated for Python 3.7)
@@ -7,18 +7,6 @@ Usage:
 
     ./dummy-web-server.py -h
     ./dummy-web-server.py -l localhost -p 8000
-
-Send a GET request:
-
-    curl http://localhost:8000
-
-Send a HEAD request:
-
-    curl -I http://localhost:8000
-
-Send a POST request:
-
-    curl -d "foo=bar&bin=baz" http://localhost:8000
 
 This code is available for use under the MIT license.
 
@@ -45,6 +33,7 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 # requirements: argparse, os, http.server, datetime, base64, glob
 import argparse
 import os
+import subprocess
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from datetime import datetime
 import base64
@@ -89,11 +78,26 @@ class S(BaseHTTPRequestHandler):
             if os.path.isdir(relpath):
                 self._set_headers("text/html; charset=utf-8", 200)
                 with open("{}/index.html".format(relpath)) as f:
-                    content = f.read()#.splitlines()
+                    content = f.read()
                     self.wfile.write("{}".format(content).encode("utf-8"))
             elif relpath.endswith(".teapot"):
                 self._set_headers("text/html; charset=utf-8", 418)
                 self.wfile.write("<title>TEAPOT</title><h1>418 - I AM SHORT AND STOUT</h1>".encode("utf-8"))
+            elif relpath.startswith("leo/comics/"):
+                file = relpath.split("comics/",1)[1]
+                if os.path.isfile("leo/comics/imgs/{}.png".format(file)):
+                    comic_file = subprocess.run(["./comics.py", "{}".format(file)], stdout=subprocess.PIPE)
+                    content = comic_file.stdout.decode("utf-8")
+                    self._set_headers("text/html; charset=utf-8", 200)
+                    self.wfile.write("{}".format(content).encode("utf-8"))
+                elif os.path.isfile("leo/comics/imgs/{}.png".format(int(file) - 1)):
+                    comic_file = subprocess.run(["./comics.py", "{}".format(int(file) - 1)], stdout=subprocess.PIPE)
+                    print(int(file) - 1)
+                    content = comic_file.stdout.decode("utf-8")
+                    self._set_headers("text/html; charset=utf-8", 200) 
+                else:
+                    self._set_headers("text/html; charset=utf-8", 404)
+                    self.wfile.write("<title>404</title><h1>404 - NOT FOUND</h1>".encode("utf-8"))
             else:
                 self._set_headers("text/html; charset=utf-8", 404)
                 self.wfile.write("<title>404</title><h1>404 - NOT FOUND</h1>".encode("utf-8"))
