@@ -5,8 +5,8 @@ Very simple HTTP server in python (Updated for Python 3.7)
 
 Usage:
 
-    ./dummy-web-server.py -h
-    ./dummy-web-server.py -l localhost -p 8000
+    ./server.py -h
+    ./server.py -l localhost -p 8000
 
 This code is available for use under the MIT license.
 
