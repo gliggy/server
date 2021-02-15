@@ -3,10 +3,13 @@ leo/
 ├── bullets.css
 ├── comics/
 │   ├── comic-style.css
+│   ├── create.sh*
 │   ├── imgs/
 │   │   ├── 10.png
 │   │   ├── 11.png
 │   │   ├── 12.png
+│   │   ├── 13.png
+│   │   ├── 14.png
 │   │   ├── 1.png
 │   │   ├── 2.png
 │   │   ├── 3.png
@@ -21,17 +24,35 @@ leo/
 │   │       ├── 1.jpg
 │   │       └── 2.jpg
 │   ├── index.html
-│   └── random/
-│       └── index.html
-├── comics.html
+│   ├── random/
+│   │   └── index.html
+│   └── txts/
+│       ├── 1
+│       ├── 10
+│       ├── 11
+│       ├── 12
+│       ├── 13
+│       ├── 14
+│       ├── 2
+│       ├── 3
+│       ├── 4
+│       ├── 5
+│       ├── 6
+│       ├── 7
+│       ├── 8
+│       ├── 9
+│       └── create.sh*
 ├── dog.html
 ├── esc-test.txt
 ├── favicon.ico
 ├── glig.png
 ├── helene/
+│   ├── Animals/
+│   │   └── fox.jpg
 │   ├── motif/
 │   │   └── motif.txt
-│   └── silteplait.txt
+│   ├── silteplait.txt
+│   └── silteplait.txt~
 ├── histoire.jpg
 ├── index.html
 ├── koalas/
@@ -41,12 +62,14 @@ leo/
 ├── list.txt
 ├── menu.html
 ├── poems/
+│   ├── birds/
+│   │   └── index.html
 │   ├── dragon/
 │   │   ├── dragon2.jpg
 │   │   ├── dragon3.jpg
 │   │   ├── dragon4.jpg
-│   │   ├── dragon.html
 │   │   ├── dragon.jpg
+│   │   ├── index.html
 │   │   └── style.css
 │   └── poems.txt
 ├── README.md
@@ -55,7 +78,6 @@ leo/
 ├── server.py*
 ├── sitemap.html
 ├── sitemap.py*
-├── sqpurple.gif
 ├── stuff/
 │   ├── Math.pdf
 │   ├── motif.txt
@@ -67,4 +89,4 @@ leo/
 │   └── index.html
 └── weather.txt
 
-12 directories, 55 files
+15 directories, 74 files

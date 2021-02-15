@@ -30,15 +30,21 @@ def buttons():
     to_return += "<li><a href='/comics'>▶|</a></li>\n"
     to_return += "</ul>\n<br>\n"
     return(to_return)
+    
+def get_alt(alt):
+    to_open = "{0}txts/{1}".format(workdir, alt)
+    with open(to_open) as f:
+        content = f.read()
+    return content
 
 if os.path.isfile(workdir + "imgs/" + img):
     script = 0
     real_img = "{}.png".format(file)
-    alt = "{}.txt".format(file)
+    alt = "{}".format(file)
     comic = "<!DOCTYPE html>\n<html>\n<head>\n<title>COMICS</title>\n<link rel='stylesheet' type='text/css' href='/comics/comic-style.css' />\n<link rel='stylesheet' type='text/css' href='/style.css' />\n</head>\n"
     comic += "<body>\n<script>0</script>\n<h1>COMICS</h1>\n<div>\n<br>\n".format(script)
     comic += buttons()
-    comic += "<a href='/comics/imgs/{0}'><img src='/comics/imgs/{0}' alt='{1}' title='{2}' class='comic'></a>\n<br>\n".format(real_img,file,alt)
+    comic += "<a href='/comics/imgs/{0}'><img src='/comics/imgs/{0}' alt='{1}' title='{2}' class='comic'></a>\n<br>\n".format(real_img,file,get_alt(alt))
     comic += buttons()
     comic += "</div>\n"
     comic += "<script>{}</script>".format(script)
@@ -46,11 +52,11 @@ if os.path.isfile(workdir + "imgs/" + img):
 elif file < 1:
     script = "alert('There are no earlier comics.'); window.location.replace('http://leo.growrows.com/comics/{}');".format(1)
     real_img = "{}.png".format(1)
-    alt = "{}.txt".format(1)
+    alt = "1"
     comic = "<!DOCTYPE html>\n<html>\n<head>\n<title>COMICS</title>\n<link rel='stylesheet' type='text/css' href='/comics/comic-style.css' />\n<link rel='stylesheet' type='text/css' href='/style.css' />\n</head>\n"
     comic += "<body>\n<script>0</script>\n<h1>COMICS</h1>\n<div>\n<br>\n".format(script)
     comic += buttons()
-    comic += "<a href='/comics/imgs/{0}'><img src='/comics/imgs/{0}' alt='{1}' title='{2}' class='comic'></a>\n<br>\n".format(real_img,file,alt)
+    comic += "<a href='/comics/imgs/{0}'><img src='/comics/imgs/{0}' alt='{1}' title='{2}' class='comic'></a>\n<br>\n".format(real_img,file,get_alt(alt))
     comic += buttons()
     comic += "</div>\n"
     comic += "<script>{}</script>".format(script)
@@ -58,11 +64,11 @@ elif file < 1:
 else:
     script = "alert('You have reached the last comic.'); window.location.replace('http://leo.growrows.com/comics/{}');".format(file - 1)
     real_img = "{}.png".format(file - 1)
-    alt = "{}.txt".format(file - 1)
+    alt = "{}".format(file - 1)
     comic = "<!DOCTYPE html>\n<html>\n<head>\n<title>COMICS</title>\n<link rel='stylesheet' type='text/css' href='/comics/comic-style.css' />\n<link rel='stylesheet' type='text/css' href='/style.css' />\n</head>\n"
     comic += "<body>\n<script>0</script>\n<h1>COMICS</h1>\n<div>\n<br>\n".format(script)
     comic += buttons()
-    comic += "<a href='/comics/imgs/{0}'><img src='/comics/imgs/{0}' alt='{1}' title='{2}' class='comic'></a>\n<br>\n".format(real_img,file,alt)
+    comic += "<a href='/comics/imgs/{0}'><img src='/comics/imgs/{0}' alt='{1}' title='{2}' class='comic'></a>\n<br>\n".format(real_img,file,get_alt(alt))
     comic += buttons()
     comic += "</div>\n"
     comic += "<script>{}</script>".format(script)
